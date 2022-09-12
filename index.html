@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #results {
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        grid-gap: 5%;
+        margin: 20px;
+      }
+      .sidepanel {
+        height: 700px; /* Specify a height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+      }
+
+      /* The sidepanel links */
+      .sidepanel a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: whitesmoke;
+        display: block;
+        transition: 0.3s;
+      }
+
+      /* When you mouse over the navigation links, change their color */
+      .sidepanel a:hover {
+        color: #f1f1f1;
+        background-color: #444;
+      }
+
+      /* Position and style the close button (top right corner) */
+      .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      /* Style the button that is used to open the sidepanel */
+      .openbtn {
+        font-size: 10px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+      }
+
+      .openbtn:hover {
+        background-color: #444;
+      }
+      #iconpack {
+        height: 20px;
+        width: 20px;
+      }
+      #youtubeicon {
+        width: 110px;
+        height: 50px;
+        position: sticky;
+        top: 25px;
+      }
+      #search {
+        text-align: center;
+
+        position: sticky;
+        top: 2opx;
+      }
+      #query {
+        padding: 10px 250px;
+        position: sticky;
+        top: 2opx;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- collapsed sidepanel start start from here -->
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#"
+        ><img
+          src="https://cdn.pixabay.com/photo/2018/11/13/21/44/instagram-3814060_1280.png"
+          id="iconpack"
+        />
+        Home</a
+      >
+      <a href="#"><i class="fa-brands fa-internet-explorer"></i> Explore</a>
+      <a href="#"
+        ><i class="fa-solid fa-circle-play"></i> Shorts</a
+      >
+      <a href="#"
+        ><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO4tIWRcb8bnO0QltGJZ5zDvmRZbFhX6ByMg&usqp=CAU"
+          id="iconpack"
+        />
+        Subscription</a
+      >
+      <hr />
+      <a href="#"
+        ><img src="Youtube-Clone\2481186-200.jpg" id="iconpack" /> Library</a
+      >
+      <a href="#"
+        ><img
+          src="https://thumbs.dreamstime.com/b/history-gray-170719354.jpg"
+          id="iconpack"
+        />
+        History</a
+      >
+      <a href="#"
+        ><img
+          src="https://www.nicepng.com/png/detail/775-7751949_youtube-play-video-www-wireframes-web-svg-png.png"
+          id="iconpack"
+        />
+        Your videos</a
+      >
+      <a href="#"
+        ><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQcpdEIyi8eguhOItcoaL-aMr6sOYFCKGHl6S-HPOPobjvPGUp9cpYt2L6kgM0eXOAiMw&usqp=CAU"
+          id="iconpack"
+        />
+        Watch Later</a
+      >
+    </div>
+
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+    &nbsp;
+    <img
+      src="https://static.vecteezy.com/system/resources/thumbnails/003/206/623/small/youtube-editorial-app-icon-free-vector.jpg"
+      id="youtubeicon"
+    />
+    <div id="search">
+      <input type="text" id="query" />
+      <button onclick="search()">
+        <img class="fa-light fa-magnifying-glass" />Search</button
+      ><br />
+
+      <div id="results"></div>
+    </div>
+  </body>
+</html>
+<script src="index.js"></script>
