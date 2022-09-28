@@ -1,9 +1,22 @@
 # Youtube-Clone
 
-         
+## Tech Stack
+#### HTML
+#### CSS 
+#### JAVASCRIPT
 
+
+## About
 This Is Youtube Clone Website You can see as You Know How to Operate This Website So We Don't need to Tell Anything.
-First Time You Go to the link please click on search Icon to see the top videos else search by your choice.
+
+
+## Deploy Link
+Netlify Link 
+https://funny-churros-0ef475.netlify.app/
+
+## How To Use IT
+First Time You Go to the link please click on search Icon to see the top videos else search by your choice.        
+
 
 Checkout Link Here:- https://benevolent-fenglisu-23325b.netlify.app/
 
